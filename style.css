@@ -221,6 +221,8 @@ html, body {
   display: block;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   object-position: top;
+  height:auto;
+  min-width: 400px;
 }
 
 
@@ -265,23 +267,29 @@ html, body {
 
 
 
-.aboutMe {
-  width:100%;
+.AboutMe {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  margin: 80px auto;
+  max-width: 90vw;
+}
+.spotifyEmbedding {
+  flex: 1;
+  max-width: 600px;
+  min-width: 350px;
 }
 .niceBox{
-    width: 50%;            
-  max-width: 1000px;      
-  min-width: 350px;        
-
-  margin: 80px auto;        
+  flex: 1;
+  max-width: 600px;
+  min-width: 350px;
   padding: 40px;
-
-  background: #f6e9cf;      
-  border: 2px  #888;     
-  border-radius: 25px;       
-
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15); 
+  background: #f6e9cf;
+  border-radius: 25px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);     
   color: #888;
   text-align: center;
   font-size: 2em;
@@ -302,30 +310,36 @@ html, body {
 
 
 
-
-.shows-section {
+.shows {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
   gap: 40px;
   margin: 80px auto;
   width: 100%;
-  max-width: 1200px;
+  max-width: 90vw;
+
 }
+
 
 
 .shows-box {
   flex: 1;
-  max-width: 55%;
+
   background: #f6e9cf;
   border-radius: 25px;
   padding: 30px 35px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   color: #666666;
-  display: flex;
+  display: block;
   flex-direction: column;
   gap: 20px;
   font-size: 2.2rem;
+  
+  height:auto;
+
+  
 }
 
 .shows-box h2 {
@@ -372,14 +386,21 @@ html, body {
 .show-location {
   font-size: 1.5rem;
 }
-
+.show-location a{
+  text-decoration: none;
+  color:inherit;
+  transition: 0.4s;
+}
+.show-location a:hover{
+  color: white;
+}
 .show-date,
 .show-time {
   font-size: 1.5rem;
 }
 
 /* Mobile layout: stack vertically */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .shows-section {
     flex-direction: column;
     align-items: center;
