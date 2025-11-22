@@ -5,10 +5,119 @@
     <link rel="icon" href="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asher Engle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="main.js"></script>
-    <style type="module" src="style.css"></style>
+   
+    <section class="pin-section">
+        <div id="container">
+            <div id="name"><h1>Asher Engle<br><div style="font-size: 0.5em;;">Rose Rock</div></h1></div>
+        </div>
+    </section>
+
+    <div class="information">
+
+        <div class="socials">
+            <a href="mailto:aengle.info@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.instagram.com/asherengle_/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@asherengle_" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://open.spotify.com/artist/7uvAMaH00bpjyhg0jD0V0f" target="_blank"><i class="fab fa-spotify"></i></a>
+            <a href="https://music.apple.com/us/artist/asher-engle/1832332396" target="_blank"><i class="fab fa-apple"></i></a>
+            <a href="https://music.amazon.com/artists/B0FLWWNRHQ/asher-engle" target="_blank"><i class="fab fa-amazon"></i></a>
+            <a href="https://music.youtube.com/channel/UCrGFpHyG7GvejssDBDkBCtw" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <div class="AboutMe">
+            <div class="niceBox">
+                <div id="blurb"><h2>About Me</h2></div>
+                <p>Asher Engle is an emerging artist carving his path in the heart of Nashville, TN. 
+                    He embraces the genres of alt-pop and soul to create his signature sound that radiates off of his guitar. 
+                    His talent went beyond songwriting when he joined the band RoseRock as the lead guitarist and explored the process of composing scores for films.
+                    Whether performing solo or as part of RoseRock, Asher Engle continues to captivate listeners, promising a future filled with musical exploration and innovation.
+
+                </p>
+            </div>
+        </div>
+
+        <div class="shows">
+            <div class="shows-section">
+            <!-- Left: image -->
+            <img src="./content/Photos/image 5.jpeg" alt="Live show" class="pic5">
+
+            <!-- Right: shows box -->
+            <div class="shows-box">
+                <h2>Upcoming Shows</h2>
+                
+                <div class="show-item">
+                    <div class="show-main">
+                        <span class="show-band">Rose Rock</span>
+                        <span class="show-location">Sometime soon</span>
+                    </div>
+                    <div class="show-meta">
+                        <span class="show-date">Dec 12, 2025</span>
+                        <span class="show-time">8:00 PM</span>
+                    </div>
+                </div>
+
+                <div class="show-item">
+                    <div class="show-main">
+                        <span class="show-band">Rose Rock</span>
+                        <span class="show-location">Your Sweet Mother's House</span>
+                    </div>
+                    <div class="show-meta">
+                        <span class="show-date">Jan 4, 2026</span>
+                        <span class="show-time">9:30 PM</span>
+                    </div>
+                </div>
+
+                <!-- Add more .show-item blocks as needed -->
+            </div>
+            </div>
+
+        </div>
+
+
+        <div class="picture">
+            <img src="./content/Photos/image 9.jpeg">
+            <img src="./content/Photos/image 13.jpeg">
+            
+            <img src="./content/Photos/image 4.jpeg">
+            
+            <img src="./content/Photos/image 17.jpeg">
+            <img src="./content/Photos/image 15.jpeg">
+            <img src="./content/Photos/image 6.jpeg">
+            <img src="./content/Photos/image 10.jpeg">
+            <img src="./content/Photos/image 12.jpeg">
+            
+        </div>
+  
+
+
+        <div class="contact">
+
+            
+            <form action="mailto:aengle.info@gmail.com" method="POST" enctype="text/plain" class="contact-form">
+                <h2>Contact Me</h2>
+
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+            <img src="./content/Photos/image 16.jpeg" class="pic16">
+        </div>
+
+    </div>
+
+    
+    <script src="script.js"></script>
   </body>
+  <footer class="site-footer">
+  <p>© 2025 Asher Engle — All Rights Reserved<br>Website done by his much too kind brother</p>
+</footer>
 </html>
+
+

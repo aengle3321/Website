@@ -1,0 +1,402 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "DreamAvenue";
+  overflow-x: clip;
+}
+
+/* Outer wrapper: provides scroll distance + view-timeline */
+.pin-section {
+  height:200vh;                 /* controls how long it stays in view */
+  view-timeline-name: --square-timeline;
+  view-timeline-axis: block;
+}
+
+/* The hero container: pinned while pin-section is in view */
+#container {
+  position: sticky;
+  top: 0;
+  height: 100vh;                  /* your hero height */
+  display: block;
+
+
+  background-image: url("./content/Photos/Image 1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Name: absolutely centered inside the sticky container,
+   animated by the view-timeline */
+#name {
+  position: absolute;
+  inset: 0;                      /* fill container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+
+  font-family: DreamAvenue;
+  font-weight: bold;
+  font-size: 4em;
+  color: #f6e9cf;
+
+  animation-name: glitchDef;
+  animation-duration: 1ms;       /* still needed for Firefox */
+  animation-timeline: --square-timeline;
+  /* Optional: control when in the scroll the animation runs */
+  animation-range: entry 0% exit 100%;
+  text-shadow: 10px -10px 0px #fb7467, -10px 10px 0px #1a1494;
+}
+
+/* Test keyframes */
+@keyframes glitchDef {
+  0% { text-shadow: 0px 0px 0px; }
+  36.5% { text-shadow: 0px 0px 0px; }
+  70%   { text-shadow: 10px -10px 0px #fb7467, -10px 10px 0px #1a1494; }
+}
+
+@font-face {
+  font-family: "DreamAvenue";
+  src: url("./content/font/Dream-Avenue.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "museo";
+  src: url("./content/font/Museo_Slab_100.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: 'Cinzel';
+    src: url('./content/font/Cinzel-Regular.woff2') format('woff2'),
+        url('./content/font/Cinzel-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+    
+.picture {
+  display: flex;
+  gap: 15px;
+
+  overflow-x: auto;        
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory; 
+  padding: 10px 0;
+
+  flex-wrap: nowrap;
+
+  -webkit-overflow-scrolling: touch; 
+}
+
+.picture img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+
+  height: 500px;               
+  width: auto !important;              
+
+  object-fit: cover;   
+  object-position: center; 
+  border-radius: 25px;  
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  flex-shrink: 0;         
+  scroll-snap-align: center;
+
+}
+
+
+
+
+.information{
+  display:block;
+}
+.socials {
+  background-color: #f6e9cf;
+  display: flex;
+  justify-content: center;     /* centers everything */
+  align-items: center;
+  gap: 2vw;                   /* perfect even spacing between icons */
+  margin-top: 0px;
+  height: 7vh;
+}
+
+.socials a {
+  justify-self: center;
+  align-self: center;
+  color:#888;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: 0.4s;
+}
+.socials a:hover{
+  transform: scale(1.2);
+  color: white;
+}
+
+
+
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  margin-top: 40px;
+  width: 100%;
+  margin-top: 10vh;
+  padding-right: 15vh;
+}
+
+.contact-form {
+  flex: 1;
+  max-width: 30%;
+  width: 100%;
+
+
+  margin-top: 225px; 
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-align: center;
+  font-size: 2em;
+  color: #666666;
+ 
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  font-size: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  background: #f6e9cf;
+  color: #888;
+  border-radius: 6px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #888;
+}
+
+.contact-form button {
+  padding: 12px;
+  font-size: 1rem;
+  background: #f6e9cf;
+  color: #888;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+  border: 2px solid #888;
+}
+
+.contact-form button:hover {
+  background-color: rgb(214, 214, 214);
+}
+
+
+.pic16 {
+  flex: 1;
+  max-width: 30%;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  object-fit: cover;
+  border-radius: 25px;
+
+  /* ✅ adds visible gap on the right */
+  margin-right: 40px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.pic5{
+  object-fit: cover;    
+  object-position: center; 
+  border-radius: 25px;  
+  display: block;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  object-position: top;
+}
+
+
+/* === MOBILE RESET — STACK VERTICALLY === */
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .contact-form,
+  .pic16 {
+    max-width: 90%;      /* ✅ full but not too wide */
+    padding-top: 0;      /* ✅ remove huge top spacing on mobile */
+    margin: 0 auto;
+  }
+
+  .pic16 {
+    height: auto;        /* ✅ natural scaling */
+  }
+}
+
+
+.site-footer {
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+  height: 5vh;
+  background-color: #f6e9cf;  
+  color: #888; 
+  font-size: 1rem;
+
+  margin-top: 80px;         
+}
+
+.site-footer p {
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+
+
+.aboutMe {
+  width:100%;
+  display: flex;
+}
+.niceBox{
+    width: 50%;            
+  max-width: 1000px;      
+  min-width: 350px;        
+
+  margin: 80px auto;        
+  padding: 40px;
+
+  background: #f6e9cf;      
+  border: 2px  #888;     
+  border-radius: 25px;       
+
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15); 
+  color: #888;
+  text-align: center;
+  font-size: 2em;
+  font-family:"DreamAvenue";
+}
+
+@media (max-width: 768px) {
+  .niceBox {
+    width: 90%;
+    padding: 25px;
+  }
+}
+
+#blurb {
+  font-family: "DreamAvenue";
+  color:#666666;
+}
+
+
+
+
+.shows-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  margin: 80px auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+
+.shows-box {
+  flex: 1;
+  max-width: 55%;
+  background: #f6e9cf;
+  border-radius: 25px;
+  padding: 30px 35px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  color: #666666;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 2.2rem;
+}
+
+.shows-box h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Each show row */
+.show-item {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.show-item:last-child {
+  border-bottom: none;
+}
+
+.show-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+
+}
+
+.show-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #888
+}
+
+/* Text styles */
+.show-band {
+  font-weight: 600;
+  color: #666666;
+  font-size: 2rem;
+}
+
+.show-location {
+  font-size: 1.5rem;
+}
+
+.show-date,
+.show-time {
+  font-size: 1.5rem;
+}
+
+/* Mobile layout: stack vertically */
+@media (max-width: 768px) {
+  .shows-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 0 16px;
+  }
+
+  .shows-image,
+  .shows-box {
+    max-width: 100%;
+  }
+
+  .show-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+}
+
+
