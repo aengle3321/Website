@@ -253,7 +253,7 @@ html, body {
   padding: 30px 0;
   text-align: center;
   height: 5vh;
-  background-color: #f6e9cf;  
+  background-color: #b5b5b5;  
   color: <!black>; 
   font-size: 1rem;
 
@@ -419,6 +419,7 @@ html, body {
     gap: 2px;
   }
 }
+
 
 
 
