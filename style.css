@@ -39,7 +39,7 @@ html, body {
   font-family: DreamAvenue;
   font-weight: bold;
   font-size: 4em;
-  color: #262625;
+  color: #141414;
 
   animation-name: glitchDef;
   animation-duration: 1ms;       /* still needed for Firefox */
@@ -419,6 +419,7 @@ html, body {
     gap: 2px;
   }
 }
+
 
 
 
