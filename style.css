@@ -46,14 +46,14 @@ html, body {
   animation-timeline: --square-timeline;
   /* Optional: control when in the scroll the animation runs */
   animation-range: entry 0% exit 100%;
-  text-shadow: 10px -10px 0px #fb7467, -10px 10px 0px #1a1494;
+  text-shadow: 10px -10px 0px #ffc559, -10px 10px 0px #807e7d;
 }
 
 /* Test keyframes */
 @keyframes glitchDef {
   0% { text-shadow: 0px 0px 0px; }
   36.5% { text-shadow: 0px 0px 0px; }
-  70%   { text-shadow: 10px -10px 0px #fb7467, -10px 10px 0px #1a1494; }
+  70%   { text-shadow: 10px -10px 0px #ffc559, -10px 10px 0px #807e7d; }
 }
 
 @font-face {
@@ -419,6 +419,7 @@ html, body {
     gap: 2px;
   }
 }
+
 
 
 
