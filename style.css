@@ -254,7 +254,7 @@ html, body {
   text-align: center;
   height: 5vh;
   background-color: #f6e9cf;  
-  color: #888; 
+  color: <!black>; 
   font-size: 1rem;
 
   margin-top: 80px;         
@@ -419,5 +419,6 @@ html, body {
     gap: 2px;
   }
 }
+
 
 
